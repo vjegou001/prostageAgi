@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class ProstageController extends AbstractController
 {
@@ -16,11 +17,11 @@ class ProstageController extends AbstractController
     }
 
     /**
-     * @Route("/stages", name="stages")
+     * @Route("/formations", name="formations")
      */
-    public function listeStages()
+    public function listeFormations()
     {
-        return new Response("<h1>Liste des stages</h1>");
+        return new Response("<h1>Liste des formation</h1>");
     }
 
     /**
