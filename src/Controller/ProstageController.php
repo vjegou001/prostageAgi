@@ -13,7 +13,9 @@ class ProstageController extends AbstractController
      */
     public function index()
     {
-        return new Response("<h1>Accueil de prostage</h1>");
+        return $this->render("prostage/index.html.twig", [
+          'message'=> 'Vous êtes sur l\'accueil de mon site'
+        ]);
     }
 
     /**
@@ -21,7 +23,9 @@ class ProstageController extends AbstractController
      */
     public function listeFormations()
     {
-        return new Response("<h1>Liste des formation</h1>");
+      return $this->render("prostage/index.html.twig", [
+        'message'=> 'Liste des formations'
+      ]);
     }
 
     /**
@@ -29,7 +33,10 @@ class ProstageController extends AbstractController
      */
     public function stage(int $id)
     {
-        return new Response("<h1>Description du stage numéro $id</h1>");
+      return $this->render("prostage/stage.html.twig", [
+        'message'=> "Vous êtes sur le stage $id",
+        'id'=>$id,
+      ]);
     }
 
     /**
@@ -37,6 +44,8 @@ class ProstageController extends AbstractController
      */
     public function listeEntreprises()
     {
-        return new Response("<h1>Liste des entreprises</h1>");
+      return $this->render("prostage/index.html.twig", [
+        'message'=> 'Vous êtes la liste des entreprises'
+      ]);
     }
 }
